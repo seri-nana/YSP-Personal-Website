@@ -1,0 +1,302 @@
+/* ===========================
+   SERI'S LANDING PAGE
+   cool-tone: purple + mauve pink
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap');
+
+/* ---- RESET & BASE ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #ecc9f0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #3a2d5c;
+  line-height: 1.7;
+  background-color: #ecc9f0;
+}
+
+/* ---- NAV ---- */
+nav {
+  background-color: #6569a3;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(101, 105, 163, 0.25);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  margin: 0 22px;
+}
+
+.navlink {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.navlink:hover {
+  color: #e8b4cc;
+}
+
+/* ---- HERO ---- */
+.hero {
+  background: linear-gradient(160deg, #c9b8e8 0%, #e2c4d8 50%, #f0d6e8 100%);
+  padding: 80px 20px 60px;
+  text-align: center;
+  border-bottom: 3px solid #b8a0d4;
+}
+
+.hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #6569a3;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(64px, 12vw, 110px);
+  font-weight: 700;
+  color: #5a4d8a;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 4px 0px rgba(194, 87, 128, 0.15);
+  margin-bottom: 20px;
+}
+
+.nicknames {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background-color: #6569a3;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  padding: 5px 16px;
+  border-radius: 999px;
+  text-transform: lowercase;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: #7a5f9a;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+}
+
+.bow-divider {
+  font-size: 2rem;
+  margin-top: 8px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* ---- SECTIONS ---- */
+.section-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #6569a3;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ---- CARDS (shared) ---- */
+.card {
+  border-radius: 18px;
+  padding: 30px 32px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(101, 105, 163, 0.18);
+}
+
+.card h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 0.97rem;
+  color: #4a3d70;
+}
+
+.card-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* ---- CARD COLORS ---- */
+.card-purple {
+  background-color: #f3f0fb;
+  border-left: 6px solid #6569a3;
+}
+
+.card-purple h3 {
+  color: #6569a3;
+}
+
+.card-pink {
+  background-color: #fdf0f6;
+  border-left: 6px solid #c25780;
+}
+
+.card-pink h3 {
+  color: #c25780;
+}
+
+.card-lavender {
+  background-color: #f3f0fb;
+  border-left: 6px solid #9b8ec4;
+}
+
+.card-lavender h3 {
+  color: #6569a3;
+}
+
+/* ---- GRID ---- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ---- FEATURE CARD (Mickey) ---- */
+.card-feature {
+  background: linear-gradient(135deg, #fce8f3 0%, #ede4f7 100%);
+  border-left: 6px solid #c25780;
+  text-align: center;
+}
+
+.card-feature h3 {
+  color: #c25780;
+  font-size: 1.3rem;
+}
+
+.big-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.mickey-row {
+  margin-top: 18px;
+  font-size: 1.3rem;
+  letter-spacing: 8px;
+}
+
+/* ---- CHEER CARD ---- */
+.card-cheer {
+  background-color: #fdf0f6;
+  border-left: 6px solid #c25780;
+}
+
+.card-cheer h3 {
+  color: #c25780;
+  font-size: 1.3rem;
+}
+
+.highlight {
+  color: #c25780;
+  font-weight: 800;
+}
+
+.cheer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cheer-badge {
+  background-color: #6569a3;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background-color: #6569a3;
+  color: #fff;
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 16px 44px;
+  }
+
+  .section-wrapper {
+    padding: 36px 16px;
+  }
+
+  .card {
+    padding: 22px 20px;
+  }
+
+  nav li {
+    margin: 0 12px;
+  }
+}
